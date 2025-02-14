@@ -1,83 +1,69 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffcccc;
+            font-family: Arial, sans-serif;
+        }
+        .heart {
+            font-size: 50px;
+            cursor: pointer;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .message {
+            display: none;
+            font-size: 20px;
+            color: #d70040;
+            margin-top: 20px;
+        }
+        .floating-heart {
+            position: absolute;
+            color: red;
+            font-size: 24px;
+            animation: float 2s linear;
+        }
+        @keyframes float {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(-100px); opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Valentine's Day Card&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ffcccc;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.heart {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: bounce 1s infinite;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes bounce {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>0%, 100% { transform: translateY(0); }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>50% { transform: translateY(-10px); }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.message {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #d70040;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.floating-heart {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: red;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: float 2s linear;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes float {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>from { transform: translateY(0); opacity: 1; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>to { transform: translateY(-100px); opacity: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Happy Valentine's Day!&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Click the heart for a special message&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="heart" onclick="showMessage()"&gt;❤️&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="message" id="valentineMessage"&gt;&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function showMessage() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelector('.heart').style.animation = 'none';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('valentineMessage').innerText = "You must be an API request... because you just returned my heart! ❤️";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('valentineMessage').style.display = 'block';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>createFloatingHearts();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function createFloatingHearts() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 0; i &lt; 10; i++) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>let heart = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>heart.classList.add('floating-heart');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>heart.innerText = '❤️';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>heart.style.left = Math.random() * window.innerWidth + 'px';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>heart.style.top = Math.random() * window.innerHeight + 'px';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.body.appendChild(heart);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; heart.remove(), 2000);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <h1>Happy Valentine's Day!</h1>
+    <p>Click the heart for a special message</p>
+    <div class="heart" onclick="showMessage()">❤️</div>
+    <p class="message" id="valentineMessage"></p>
+
+    <script>
+        function showMessage() {
+            document.querySelector('.heart').style.animation = 'none';
+            document.getElementById('valentineMessage').innerText = 
+                "You must be an API request... because you just returned my heart! ❤️";
+            document.getElementById('valentineMessage').style.display = 'block';
+            createFloatingHearts();
+        }
+
+        function createFloatingHearts() {
+            for (let i = 0; i < 10; i++) {
+                let heart = document.createElement('div');
+                heart.classList.add('floating-heart');
+                heart.innerText = '❤️';
+                heart.style.left = Math.random() * window.innerWidth + 'px';
+                heart.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 2000);
+            }
+        }
+    </script>
 </body>
 </html>
+
